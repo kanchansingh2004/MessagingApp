@@ -23,4 +23,10 @@ public class ControllerUseCase {
     public String sayHelloPath(@PathVariable String name){
         return "Hello "+name+" from BridgeLabz";
     }
+
+    //UC-04 use POST request method
+    @PostMapping("/post")
+    public String callPost(@RequestBody UserDTO user){
+        return "Hello "+ user.getFirstName() + " " + user.getLastName() + " From BridgeLabz";
+    }
 }
