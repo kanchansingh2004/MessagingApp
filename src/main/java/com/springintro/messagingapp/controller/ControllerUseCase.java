@@ -29,4 +29,10 @@ public class ControllerUseCase {
     public String callPost(@RequestBody UserDTO user){
         return "Hello "+ user.getFirstName() + " " + user.getLastName() + " From BridgeLabz";
     }
+
+    //UC-05 use PUT Request Method
+    @PutMapping("/put/{firstName}")
+    public String callPut(@PathVariable String firstName, @RequestParam String lastName){
+        return "Hello "+ firstName + " " + lastName + " From BridgeLabz";
+    }
 }
