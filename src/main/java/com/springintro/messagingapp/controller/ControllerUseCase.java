@@ -14,4 +14,10 @@ public class ControllerUseCase {
     public String callHello(){
         return "Hello From BridgeLabz"; //Return the message
     }
+
+    //UC-02 Use Get Request and pass name and display results
+    @GetMapping("/query")
+    public String callQuery(@RequestParam String name){
+        return "Hello "+name+" From BridgeLabz";
+    }
 }
